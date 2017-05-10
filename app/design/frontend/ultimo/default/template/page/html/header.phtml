@@ -333,15 +333,15 @@
 					<!-- Primary columns -->
 
 					<?php if (isset($grid['primLeftCol'])): ?>
-						<!-- Left column -->
-						<div class="hp-block left-column <?php echo $grid['primLeftCol']; ?>">
-							<?php echo $this->getChildHtml('container_header_primary_left_1'); ?>
-							<?php if (isset($html['primLeftCol'])): ?>
-								<?php foreach ($html['primLeftCol'] as $element): ?>
-									<div class="item"><?php echo $element; ?></div>
-								<?php endforeach; ?>
-							<?php endif; ?>
-						</div> <!-- end: left column -->
+                            <!-- Left column -->
+                            <div class="hp-block left-column <?php echo $grid['primLeftCol']; ?>">
+                                <?php echo $this->getChildHtml('container_header_primary_left_1'); ?>
+                                <?php if (isset($html['primLeftCol'])): ?>
+                                    <?php foreach ($html['primLeftCol'] as $element): ?>
+                                        <div class="item"><?php echo $element; ?></div>
+                                    <?php endforeach; ?>
+                                <?php endif; ?>
+                            </div> <!-- end: left column -->
 					<?php endif; ?>
 
 					<?php if (isset($grid['primCentralCol'])): ?>
@@ -358,7 +358,7 @@
 
 					<?php if (isset($grid['primRightCol'])): ?>
 						<!-- Right column -->
-						<div class="hp-block right-column <?php echo $grid['primRightCol']; ?>">
+                        <div class="hp-block right-column <?php echo $grid['primRightCol']; ?>">
 							<?php echo $this->getChildHtml('container_header_primary_right_1'); ?>
 							<?php if (isset($html['primRightCol'])): ?>
 								<?php foreach ($html['primRightCol'] as $element): ?>

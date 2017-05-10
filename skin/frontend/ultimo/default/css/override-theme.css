@@ -490,7 +490,7 @@
 	margin-right: 0;
 }
 
-@media only screen and (max-width: 960px) {
+@media only screen and (max-width: 1400px) {
 
 	/* If special class exists, 
 	   reset blocks below this breakpoint - blocks become full width and stack vertically. */
