@@ -342,8 +342,8 @@
 			</action>
 			-->
 					
-			<!-- Remove checkout links -->
-			<remove name="checkout_cart_link" />
+			<!-- Remove checkout links
+			<remove name="checkout_cart_link" />-->
 			
 		</reference>
 		

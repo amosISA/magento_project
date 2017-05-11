@@ -154,6 +154,7 @@
 			<div id="account-links-wrapper-regular">
 				<div id="header-account" class="top-links links-wrapper-separators-left skip-content skip-content--style">
 					<?php echo $accountLinksHtml; ?>
+                    <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_header_top_links_media')->toHtml() ?>
 				</div>
 			</div>
 		<?php endif; ?>
