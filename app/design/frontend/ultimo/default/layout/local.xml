@@ -310,6 +310,10 @@
 				<label>Page Header, Primary, Right Column</label>
 				<action method="setElementClass"><value>item container_header_primary_right_1 std</value></action>
 			</block>
+
+			<block type="cms/block" name="block_before_navbar">
+					<action method="setBlockId"><block_id>block_before_navbar</block_id></action>
+			</block>
 			
 		</reference>
 

@@ -410,3 +410,8 @@ input.input-text, select, textarea,
 	-webkit-transition:	color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
 	-o-transition:		color 300ms ease-in-out, background-color 300ms ease-in-out, border-color 300ms ease-in-out;
 }
+
+/* Social top links */
+.social-top-icons a img {
+	margin-top: 4px;
+}

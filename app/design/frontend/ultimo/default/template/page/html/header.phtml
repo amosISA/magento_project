@@ -356,6 +356,17 @@
 						</div> <!-- end: central column -->
 					<?php endif; ?>
 
+                    <!-- Bloque para la navegación de arriba del navbar -->
+                    <div class="hp-block right-column <?php echo $grid['primRightCol']; ?>">
+                        <div id="header-nav" class="nav-container skip-content sticky-container">
+                            <div class="nav container clearer simple">
+                                <div class="inner-container">
+                                    <?php echo $this->getChildHtml('block_before_navbar') ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
 					<?php if (isset($grid['primRightCol'])): ?>
 						<!-- Right column -->
                         <div class="hp-block right-column <?php echo $grid['primRightCol']; ?>">
