@@ -3514,3 +3514,35 @@ body.cms-index-index .breadcrumbs { display:none; }
 .section-line:after,
 .section-title:after
 { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+
+/* Penultimate styles div center */
+.page-banners .penultimate-div {
+	text-align: center;
+	background-color: #e5e0d6;
+	height: 260px;
+}
+
+.penultimate-div {
+	display: inline-block;
+}
+.penultimate-div p{
+	margin-left: 10px; margin-right: 10px;
+}
+
+.page-banners .ultimo-div {
+	text-align: center;
+	height: 260px;
+	width: 300px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.ultimo-div {
+	display: inline-block;
+
+}
+
+.penultimate-img {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
