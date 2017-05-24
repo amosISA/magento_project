@@ -88,8 +88,6 @@
     </div>
 </div>-->
 
-
-
             <br/>
             <br/>
             <br/>
@@ -99,33 +97,31 @@
 
             <br/>
             <br/>
-            <div class="grid12-3">
+            <?php
+                $category_women_id = 126; //categoria women
 
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <img src="<?php echo $this->getSkinUrl('images/home/chica1.png') ?>" alt="T-shirt" />
-                </div>
+                $products_women = Mage::getModel('catalog/category')->load($category_women_id);
+                $productswomenlist = $products_women->getProductCollection()->addAttributeToSelect('*');
+            ?>
 
-            </div>
-            <div class="grid12-3">
+            <?php foreach($productswomenlist as $product): ?>
 
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <img src="<?php echo $this->getSkinUrl('images/home/chica2.png') ?>" alt="T-shirt" />
-                </div>
+                    <div class="grid12-3">
 
-            </div>
-            <div class="grid12-3">
+                        <div class="feature feature-icon-hover indent indent-size-xl">
+                            <a href="<?php echo $product->getProductUrl() ?>">
+                                <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(255, 373); ?>" alt="<?php echo $product->getName()?>" />
+                            </a>
+                        </div>
+                    </div>
 
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <img src="<?php echo $this->getSkinUrl('images/home/chica3.png') ?>" alt="T-shirt" />
-                </div>
-
-            </div>
+            <?php endforeach; ?>
 
             <div class="grid12-3">
 
                 <div class="feature feature-icon-hover indent indent-size-xl">
                     <p>NOVEDADES MUJER</p>
-                    <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">VER MÁS</a>
+                    <a href="<?php echo $products_women->getUrl(); ?>" class="go">VER MÁS</a>
                 </div>
 
             </div>
@@ -134,36 +130,35 @@
             <br/>
             <br/>
 
+            <?php
+                $category_men_id = 127; //categoria men
+
+                $products_men = Mage::getModel('catalog/category')->load($category_men_id);
+                $productsmenlist = $products_men->getProductCollection()->addAttributeToSelect('*');
+            ?>
+
             <div class="grid12-3">
 
                 <div class="feature feature-icon-hover indent indent-size-xl">
                     <p>NOVEDADES HOMBRE</p>
-                    <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">VER MÁS</a>
-                </div>
-
-            </div>
-            <div class="grid12-3">
-
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <img src="<?php echo $this->getSkinUrl('images/home/chico1.png') ?>" alt="T-shirt" />
-                </div>
-
-            </div>
-            <div class="grid12-3">
-
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <img src="<?php echo $this->getSkinUrl('images/home/chico2.png') ?>" alt="T-shirt" />
+                    <a href="<?php echo $products_men->getUrl(); ?>" class="go">VER MÁS</a>
                 </div>
 
             </div>
 
-            <div class="grid12-3">
+            <?php foreach($productsmenlist as $product): ?>
 
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <img src="<?php echo $this->getSkinUrl('images/home/chico3.png') ?>" alt="T-shirt" />
+                <div class="grid12-3">
+
+                    <div class="feature feature-icon-hover indent indent-size-xl">
+                        <a href="<?php echo $product->getProductUrl() ?>">
+                            <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(255, 373); ?>" alt="<?php echo $product->getName()?>" />
+                        </a>
+                    </div>
                 </div>
 
-            </div>
+            <?php endforeach; ?>
+
             <div class="clearer"></div>
             <br/>
             <br/>
