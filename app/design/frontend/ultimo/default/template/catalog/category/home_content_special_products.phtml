@@ -96,26 +96,65 @@
 <div class="nested-container">
 
     <div class="page-banners grid-container">
-        <div class="grid12-3 mobile-grid banner">
-            <img style="position:absolute;margin-left:180px;margin-top:20px;" src="<?php echo $this->getSkinUrl('images/home/sp_prod/pr1.png') ?>" alt="T-shirt" />
-            <img src="<?php echo $this->getSkinUrl('images/home/sp_prod/sp1.png') ?>" alt="T-shirt" />
-        </div>
-        <div class="grid12-3 mobile-grid banner">
-            <img style="position:absolute;margin-left:180px;margin-top:20px;" src="<?php echo $this->getSkinUrl('images/home/sp_prod/pr1.png') ?>" alt="T-shirt" />
-            <img src="<?php echo $this->getSkinUrl('images/home/sp_prod/sp2.png') ?>" alt="T-shirt" />
-        </div>
-        <div class="grid12-3 mobile-grid banner">
-            <img style="position:absolute;margin-left:180px;margin-top:20px;" src="<?php echo $this->getSkinUrl('images/home/sp_prod/pr1.png') ?>" alt="T-shirt" />
-            <img src="<?php echo $this->getSkinUrl('images/home/sp_prod/sp3.png') ?>" alt="T-shirt" />
-        </div>
+        <?php
+        $category_special_prod = 128; //categoria special products
+        $count = 2;
+        $count2 = 0;
+
+        $products_spec = Mage::getModel('catalog/category')->load($category_special_prod);
+        $productsspeciallist = $products_spec->getProductCollection()->addAttributeToSelect('*')->addAttributeToSelect('price');
+        ?>
+
+        <?php foreach($productsspeciallist as $product): ?>
+
+            <div class="grid12-3 mobile-grid banner prod-spec-first-div">
+
+                <div class="prod-spec-container-div">
+                    <h5 class="prod-spe-price"><?php echo number_format($product->getPrice(), 2, '.', '').'€';?></h5>
+                    <h3 class="prod-spe-finalPrice"><?php echo number_format($product->getFinalPrice(), 2, '.', '').'€'; ?></h3>
+                    <span class="prod-spe-name">Short Claro</span>
+                    <a href="<?php echo $product->getProductUrl(); ?>"><span>+</span></a>
+                </div>
+
+                <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(371, 475); ?>" alt="<?php echo $product->getName()?>" />
+
+            </div>
+
+            <?php if ($count <= 0): break; ?>
+            <?php endif; ?>
+            <?php $count--; ?>
+
+        <?php endforeach; ?>
         <div class="grid12-3 mobile-grid banner">
             <p>CLP SHORTS</p>
             <p>Descubre todos nuestros nuevos modelos de shorts para verano</p>
-            <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">VER MÁS</a>
+            <a href="<?php echo $products_spec->getUrl(); ?>" class="go">VER MÁS</a>
         </div>
     </div>
 
     <div class="page-banners grid-container">
+        <?php foreach($productsspeciallist as $product): ?>
+
+            <?php if ($count2 > 2): ?>
+                <div class="grid12-3 mobile-grid banner prod-spec-first-div">
+
+                    <div class="prod-spec-container-div">
+                        <h5 class="prod-spe-price"><?php echo number_format($product->getPrice(), 2, '.', '').'€';?></h5>
+                        <h3 class="prod-spe-finalPrice"><?php echo number_format($product->getFinalPrice(), 2, '.', '').'€'; ?></h3>
+                        <span class="prod-spe-name">Short Claro</span>
+                        <a href="<?php echo $product->getProductUrl(); ?>"><span>+</span></a>
+                    </div>
+
+                    <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(371, 475); ?>" alt="<?php echo $product->getName()?>" />
+
+                </div>
+            <?php endif; ?>
+            <?php $count2++; ?>
+
+        <?php endforeach; ?>
+    </div>
+
+    <!--<div class="page-banners grid-container">
         <div class="grid12-3 mobile-grid banner">
             <img style="position:absolute;margin-left:180px;margin-top:20px;" src="<?php echo $this->getSkinUrl('images/home/sp_prod/pr1.png') ?>" alt="T-shirt" />
             <img src="<?php echo $this->getSkinUrl('images/home/sp_prod/sp4.png') ?>" alt="T-shirt" />
@@ -132,7 +171,7 @@
             <img style="position:absolute;margin-left:180px;margin-top:20px;" src="<?php echo $this->getSkinUrl('images/home/sp_prod/pr1.png') ?>" alt="T-shirt" />
             <img src="<?php echo $this->getSkinUrl('images/home/sp_prod/sp7.png') ?>" alt="T-shirt" />
         </div>
-    </div>
+    </div>-->
 
 </div>
 <br/>

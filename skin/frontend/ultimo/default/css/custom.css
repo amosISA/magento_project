@@ -18,14 +18,15 @@
     margin-left: 200px;
     margin-top: 50px;
   }*/
-
-  .prod-spec-container-div {
-    position: absolute;
-    margin-left: 200px;
-    margin-top: 12px;
-
-    span, h3, h5, a {
-      text-align: right;
-    }
-  }
+}
+.prod-spec-first-div .prod-spec-container-div {
+  position: absolute;
+  margin-left: 200px;
+  margin-top: 12px;
+}
+.prod-spec-first-div .prod-spec-container-div span,
+.prod-spec-first-div .prod-spec-container-div h3,
+.prod-spec-first-div .prod-spec-container-div h5,
+.prod-spec-first-div .prod-spec-container-div a {
+  text-align: right;
 }
