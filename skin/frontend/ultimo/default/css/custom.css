@@ -1,27 +1,13 @@
+/* Special products homepage */
 .prod-spec-first-div {
-  /*.prod-spe-finalPrice {
-    position: absolute;
-    margin-left: 200px;
-    margin-top: 32px;
-  }
-
-  .prod-spe-price {
-    position: absolute;
-    margin-left: 206px;
-    margin-top: 20px;
-    font-size: 18px;
-    text-decoration: line-through;
-  }
-
-  .prod-spe-name{
-    position: absolute;
-    margin-left: 200px;
-    margin-top: 50px;
-  }*/
+  position: relative;
+}
+.prod-spec-first-div .prod-spe-price {
+  text-decoration: line-through;
 }
 .prod-spec-first-div .prod-spec-container-div {
   position: absolute;
-  margin-left: 200px;
+  /*margin-left: 200px;*/
   margin-top: 12px;
 }
 .prod-spec-first-div .prod-spec-container-div span,
@@ -29,4 +15,52 @@
 .prod-spec-first-div .prod-spec-container-div h5,
 .prod-spec-first-div .prod-spec-container-div a {
   text-align: right;
+}
+.prod-spec-first-div .prod-spec-container-div .prod-spe-plus {
+  font-size: 20px;
+}
+.grid-container .prod-spec-first-div {
+  /*float: left;
+    padding: 0;
+    margin: 0;
+    height: 100%;*/
+  display: inline-block;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+/* Header  */
+.header-container3 .header-top-container {
+  background-color: #fffcf4 !important;
+}
+.header-container3 .header-primary-container {
+  background-color: #fffcf4 !important;
+}
+/* Content top iconos */
+.std .container-top-homepage {
+  width: 100%;
+  text-align: center;
+}
+.std .container-top-homepage .title-icons-content-top {
+  font-size: 14.4px;
+  font-weight: 700;
+  display: inline-block;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: #5c5c5c;
+  margin-bottom: 18px;
+  width: 100px;
+}
+.std .container-top-homepage .grid12-3 {
+  margin: 0;
+  text-align: center;
+  width: 200px;
+  margin-left: 40px;
+  padding: 0;
+}
+.std .container-top-homepage .grid12-3 div {
+  margin: 0;
+}
+/* Slider text */
+.slide .light1 {
+  font-size: 30px;
 }

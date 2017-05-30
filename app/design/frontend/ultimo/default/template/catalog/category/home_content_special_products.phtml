@@ -107,16 +107,16 @@
 
         <?php foreach($productsspeciallist as $product): ?>
 
-            <div class="grid12-3 mobile-grid banner prod-spec-first-div">
+            <div class="grid12-3 mobile-grid banner prod-spec-first-div" style="height: 250px;">
 
                 <div class="prod-spec-container-div">
                     <h5 class="prod-spe-price"><?php echo number_format($product->getPrice(), 2, '.', '').'€';?></h5>
                     <h3 class="prod-spe-finalPrice"><?php echo number_format($product->getFinalPrice(), 2, '.', '').'€'; ?></h3>
                     <span class="prod-spe-name">Short Claro</span>
-                    <a href="<?php echo $product->getProductUrl(); ?>"><span>+</span></a>
+                        <a href="<?php echo $product->getProductUrl(); ?>"><span class="prod-spe-plus">+</span></a>
                 </div>
 
-                <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(371, 475); ?>" alt="<?php echo $product->getName()?>" />
+                <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')/*->resize(275, 300)*/; ?>" alt="<?php echo $product->getName()?>" />
 
             </div>
 
@@ -125,7 +125,7 @@
             <?php $count--; ?>
 
         <?php endforeach; ?>
-        <div class="grid12-3 mobile-grid banner">
+        <div class="grid12-3 mobile-grid banner prod-spec-first-div">
             <p>CLP SHORTS</p>
             <p>Descubre todos nuestros nuevos modelos de shorts para verano</p>
             <a href="<?php echo $products_spec->getUrl(); ?>" class="go">VER MÁS</a>
@@ -142,10 +142,10 @@
                         <h5 class="prod-spe-price"><?php echo number_format($product->getPrice(), 2, '.', '').'€';?></h5>
                         <h3 class="prod-spe-finalPrice"><?php echo number_format($product->getFinalPrice(), 2, '.', '').'€'; ?></h3>
                         <span class="prod-spe-name">Short Claro</span>
-                        <a href="<?php echo $product->getProductUrl(); ?>"><span>+</span></a>
+                        <a href="<?php echo $product->getProductUrl(); ?>"><span class="prod-spe-plus">+</span></a>
                     </div>
 
-                    <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(371, 475); ?>" alt="<?php echo $product->getName()?>" />
+                    <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image'); ?>" alt="<?php echo $product->getName()?>" />
 
                 </div>
             <?php endif; ?>
