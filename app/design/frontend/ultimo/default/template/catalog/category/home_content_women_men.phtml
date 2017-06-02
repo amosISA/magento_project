@@ -1,102 +1,6 @@
-<!-- ESTO ES LO QUE HABÍA ANTES EN CONTENT DE CMS PAGE
-<div style="background-color: #f5f5f5;">
-    <div class="container">
-        <div class="inner-container">
 
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <h2>More features than you could wish for</h2>
-            <br/>
-            <p style="font-size: 16px; color: #999; line-height: 23px;">Ultimo is a premium Magento theme with advanced admin module. It’s extremely customizable, easy to use and fully responsive. Suitable for every type of store, optimized for SEO. Great as a starting point for your custom projects. You can change visual appearance of almost every element. No coding needed, all can be edited directly in admin panel. </p>
+            <h2 class="title-wom-men">NOVEDADES HOMBRE / MUJER</h2>
 
-            <br/>
-            <br/>
-            <div class="grid12-4">
-
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <span class="ic ic-4x ic-paint" style="color:#fd517f;"></span>
-                    <h3>Unlimited Colors</h3>
-                    <p>You have never seen so many options! Change colors of dozens of elements, apply textures, upload background images...</p>
-                    <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">See all features</a>
-                </div>
-
-            </div>
-            <div class="grid12-4">
-
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <span class="ic ic-4x ic-smartphones" style="color:#fd517f;"></span>
-                    <h3>Responsive Layout</h3>
-                    <p>Ultimo can be displayed on any screen. It is based on fluid grid system. If screen is resized, layout will be automatically adjusted...</p>
-                    <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">See all features</a>
-                </div>
-
-            </div>
-            <div class="grid12-4">
-
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <span class="ic ic-4x ic-menu" style="color:#fd517f;"></span>
-                    <h3>Mega Menu</h3>
-                    <p>Two styles: wide mega menu or classic drop-down menu. You can add any custom content (images, text, HTML) to any category in the catalog...</p>
-                    <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">See all features</a>
-                </div>
-
-            </div>
-
-            <div class="clearer"></div>
-            <br/>
-            <br/>
-
-            <div class="grid12-4">
-
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <span class="ic ic-4x ic-microscope" style="color:#fd517f;"></span>
-                    <h3>Font Icons</h3>
-                    <p>Font icons give you more control over the visual appearance of the icons. Add anywhere you want and customize to your needs...</p>
-                    <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">See all features</a>
-                </div>
-
-            </div>
-            <div class="grid12-4">
-
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <span class="ic ic-4x ic-lightbulb" style="color:#fd517f;"></span>
-                    <h3>Easy to Customize</h3>
-                    <p>Use as a starting point for your custom projects. Create multiple child themes (theme variants) with ease...</p>
-                    <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">See all features</a>
-                </div>
-
-            </div>
-            <div class="grid12-4">
-
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <span class="ic ic-4x ic-anchor" style="color:#fd517f;"></span>
-                    <h3>50+ CMS Blocks</h3>
-                    <p>You can use content placeholders to display custom content in almost every part of the store. Import sample CMS blocks from the demo...</p>
-                    <a href="{{store url='ultimo-responsive-magento-theme'}}" class="go">See all features</a>
-                </div>
-
-            </div>
-            <div class="clearer"></div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
-        </div>
-    </div>
-</div>-->
-
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <h2>NOVEDADES HOMBRE / MUJER</h2>
-            <br/>
-
-            <br/>
-            <br/>
             <?php
                 $category_women_id = 126; //categoria women
 
@@ -108,20 +12,22 @@
 
                     <div class="grid12-3">
 
-                        <div class="feature feature-icon-hover indent indent-size-xl">
+                        <!--<div class="feature feature-icon-hover indent indent-size-xl">-->
                             <a href="<?php echo $product->getProductUrl() ?>">
                                 <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(255, 373); ?>" alt="<?php echo $product->getName()?>" />
                             </a>
-                        </div>
+                        <!--</div>-->
                     </div>
 
             <?php endforeach; ?>
 
             <div class="grid12-3">
 
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <p>NOVEDADES MUJER</p>
-                    <a href="<?php echo $products_women->getUrl(); ?>" class="go">VER MÁS</a>
+                <div class="women-offer">
+                    <p class="wom-text">Novedades Mujer</p>
+                    <div class="wom-view_more">
+                        <a href="<?php echo $products_women->getUrl(); ?>" class="go">VER MÁS</a>
+                    </div>
                 </div>
 
             </div>
@@ -139,10 +45,12 @@
 
             <div class="grid12-3">
 
-                <div class="feature feature-icon-hover indent indent-size-xl">
-                    <p>NOVEDADES HOMBRE</p>
-                    <a href="<?php echo $products_men->getUrl(); ?>" class="go">VER MÁS</a>
-                </div>
+                    <div class="men-offer">
+                        <p class="wom-text">NOVEDADES HOMBRE</p>
+                        <div class="wom-view_more">
+                            <a href="<?php echo $products_men->getUrl(); ?>" class="go">VER MÁS</a>
+                        </div>
+                    </div>
 
             </div>
 
@@ -150,11 +58,11 @@
 
                 <div class="grid12-3">
 
-                    <div class="feature feature-icon-hover indent indent-size-xl">
+                    <!--<div class="feature feature-icon-hover indent indent-size-xl">-->
                         <a href="<?php echo $product->getProductUrl() ?>">
                             <img src="<?php echo Mage::helper('catalog/image')->init($product, 'small_image')->resize(255, 373); ?>" alt="<?php echo $product->getName()?>" />
                         </a>
-                    </div>
+                    <!--</div>-->
                 </div>
 
             <?php endforeach; ?>

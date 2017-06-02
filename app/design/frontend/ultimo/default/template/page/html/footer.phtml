@@ -103,51 +103,9 @@
 	<?php if (!empty($b['primary']) || !empty($b['primary_bottom']) || !empty($b['primary_top'])): ?>
 	
 	<div class="footer-primary-container section-container<?php //if($classString['primary-container']) echo " " . $classString['primary-container']; ?>">
-		<div class="footer-primary footer container">
-			<div class="inner-container">
 
-				<?php if (!empty($b['primary_top'])): ?>
-				<div class="footer-primary-top grid12-12">
-					<div class="<?php if(!empty($b['primary'])) echo 'footer-primary-top-spacing '; ?>clearer">
-						<?php echo $b['primary_top']['bottomContainer']; ?>
-					</div> 
-				</div> <!-- end: footer-primary-top -->
-				<?php endif; ?>
-
-				<?php if (!empty($b['primary'])): ?>
-				<div class="clearer">
-					<?php echo $b['primary']; ?>
-				</div> <!-- end: footer-primary section -->
-				<?php endif; ?>
-				
-				<?php if (!empty($b['primary_bottom'])): ?>
-				<div class="footer-primary-bottom grid12-12">
-					<div class="<?php if(!empty($b['primary'])) echo 'footer-primary-bottom-spacing '; ?>clearer">
-					
-						<?php if (!empty($b['primary_bottom']['left'])): ?>
-							<div class="item item-left clearer block_footer_primary_bottom_left">
-								<?php echo $b['primary_bottom']['left']; ?>
-							</div>
-						<?php endif; ?>
-						
-						<?php if (!empty($b['primary_bottom']['right'])): ?>
-							<div class="item item-right clearer block_footer_primary_bottom_right">
-								<?php echo $b['primary_bottom']['right']; ?>
-							</div>
-						<?php endif; ?>
-						
-						<?php if (!empty($b['primary_bottom']['newsletter'])): ?>
-							<div class="item item-right newsletter-wrapper clearer">
-								<?php echo $b['primary_bottom']['newsletter']; ?>
-							</div>
-						<?php endif; ?>
-						
-					</div> 
-				</div> <!-- end: footer-primary-bottom -->
-				<?php endif; ?>
-			
-			</div> <!-- end: inner-container -->
-		</div> <!-- end: footer-primary -->
+        <?php echo $this->getLayout()->createBlock('cms/block')->setBlockId('block_footer_column5')->toHtml(); ?>
+        
 	</div>
 	
 	<?php endif; ?>
@@ -160,7 +118,7 @@
 
 	<div class="footer-secondary-container section-container">
 		<div class="footer-secondary footer container">
-			<div class="inner-container">
+			<div class="inner-container contenedor-segundo-footer">
 			
 				<?php if (!empty($b['secondary'])): ?>
 				<div class="clearer">

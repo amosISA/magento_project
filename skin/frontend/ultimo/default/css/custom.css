@@ -64,3 +64,107 @@
 .slide .light1 {
   font-size: 30px;
 }
+/* Footer */
+.footer-container3 .footer-bottom-container {
+  background-color: #fffcf4 !important;
+}
+.footer-container3 .footer-bottom-container .item-center {
+  text-align: center;
+}
+.footer-container3 .footer-secondary-container {
+  background-color: #454545;
+}
+.footer-container3 .image-footer-primary {
+  margin-top: -30px;
+  margin-bottom: -10px;
+  position: relative;
+  text-align: center;
+  float: left;
+  height: 250px;
+  width: 100%;
+}
+.footer-container3 .footer-primary-text-inside {
+  color: #fff;
+  font-size: 31px;
+  font-weight: 300;
+  line-height: 35px;
+}
+.footer-container3 .container-text-footer-prim {
+  position: absolute;
+  width: 70%;
+  margin-left: 16%;
+}
+.footer-container3 .contenedor-segundo-footer {
+  color: #fff;
+}
+.footer-container3 .contenedor-segundo-footer a {
+  color: #fff;
+}
+.footer-container3 .contenedor-segundo-footer .grid12-12 {
+  margin-top: 20px;
+}
+/* Novedades hombre y mujer */
+.women-men-container .title-wom-men {
+  line-height: 100px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #5c5c5c;
+}
+.women-men-container .women-offer {
+  border: 1px solid #ddbd96;
+  text-align: center;
+  height: 371px;
+  width: 255px;
+}
+.women-men-container .women-offer .wom-text {
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 130px;
+  margin: 50% auto 0;
+}
+.women-men-container .women-offer .wom-view_more {
+  width: 130px;
+  border-top: 1px solid #977f5e;
+  margin: 15px auto;
+  padding-top: 10px;
+}
+.women-men-container .women-offer .wom-view_more a {
+  font-size: 13px;
+  font-weight: 700;
+  color: #977f5e;
+  text-transform: uppercase;
+}
+.women-men-container .women-offer .wom-view_more a:hover {
+  text-decoration: underline;
+}
+.women-men-container .men-offer {
+  border: 1px solid #ddbd96;
+  text-align: center;
+  height: 371px;
+  width: 255px;
+}
+.women-men-container .men-offer .wom-text {
+  font-size: 17px;
+  font-weight: 300;
+  text-transform: uppercase;
+  width: 130px;
+  margin: 50% auto 0;
+}
+.women-men-container .men-offer .wom-view_more {
+  width: 130px;
+  border-top: 1px solid #977f5e;
+  margin: 15px auto;
+  padding-top: 10px;
+}
+.women-men-container .men-offer .wom-view_more a {
+  font-size: 13px;
+  font-weight: 700;
+  color: #977f5e;
+  text-transform: uppercase;
+}
+.women-men-container .men-offer .wom-view_more a:hover {
+  text-decoration: underline;
+}
