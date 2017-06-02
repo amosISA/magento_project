@@ -1,101 +1,7 @@
-<!--<div style="background: center center; background-image: url({{media url='wysiwyg/demo/infortis/ultimo/custom/pattern.jpg'}});">
-	<div class="container">
-		<div class="inner-container"  style="text-align: center;">
 
-			<div style="display: inline-block; padding:91px 0; color: #26525F;">
-
-					<h1 style="font-size: 40px;">Responsive Magento Theme</h1>
-					<h2 style="font-size: 20px;">Extremely Customizable</h2>
-
-			</div>
-
-		</div>
-	</div>
-</div>-->
-
-
-
-<!--<div style="background-color: #fafafa;">
-	<div class="container">
-		<div class="inner-container">
-
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<h2>Our Product Brands</h2>
-			{{block type="brands/brands" template="infortis/brands/brand_slider.phtml" breakpoints="[0, 1], [320, 2], [480, 2], [768, 3], [960, 4], [1280, 5]" timeout="6000" move="1" pagination="0"}}
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-
-		</div>
-	</div>
-</div>-->
-
-
-
-<!--<div style="background-color: #fff;">
-	<div class="container">
-		<div class="inner-container">
-
-			<div>
-
-				<br/>
-				<br/>
-				<br/>
-				<br/>
-				<h2>Beautiful & Fully Customizable Design</h2>
-				<br/>
-				<p style="font-size: 16px; color: #999; line-height: 23px;">You can create any imaginable design or layout with Ultimo, and you don’t need to know absolutely anything about coding. All the options you could ever want are right there in our admin panel.</p>
-
-			</div>
-
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<div class="nested-container">
-
-				<div class="page-banners grid-container">
-					<div class="grid12-3 mobile-grid banner">
-						<a href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own">
-							<img src="{{media url="wysiwyg/infortis/ultimo/banners/square-01.png}}" alt="Sample banner" />
-						</a>
-					</div>
-					<div class="grid12-3 mobile-grid banner">
-						<a href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own">
-							<img src="{{media url="wysiwyg/infortis/ultimo/banners/square-02.png}}" alt="Sample banner" />
-						</a>
-					</div>
-					<div class="grid12-3 mobile-grid banner">
-						<a href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own">
-							<img src="{{media url="wysiwyg/infortis/ultimo/banners/square-03.png}}" alt="Sample banner" />
-						</a>
-					</div>
-					<div class="grid12-3 mobile-grid banner">
-						<a href="{{store direct_url="about-magento-demo-store"}}" title="Replace this image with your own">
-							<img src="{{media url="wysiwyg/infortis/ultimo/banners/square-04.png}}" alt="Sample banner" />
-						</a>
-					</div>
-				</div>
-
-			</div>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-
-		</div>
-	</div>
-</div>-->
-
-<br/>
-<br/>
 <div class="nested-container">
 
-    <div class="page-banners grid-container">
+    <div class="page-banners grid-container row-prod-spec">
         <?php
         $category_special_prod = 128; //categoria special products
         $count = 2;
@@ -126,13 +32,17 @@
 
         <?php endforeach; ?>
         <div class="grid12-3 mobile-grid banner prod-spec-first-div">
-            <p>CLP SHORTS</p>
-            <p>Descubre todos nuestros nuevos modelos de shorts para verano</p>
-            <a href="<?php echo $products_spec->getUrl(); ?>" class="go">VER MÁS</a>
+            <div class="clp-shorts-div">
+                <h3>CLP<br>SHORTS</h3>
+                <p>Descubre todos nuestros nuevos modelos de shorts para verano</p>
+                <div class="view-more">
+                    <a href="<?php echo $products_spec->getUrl(); ?>" class="go">VER MÁS</a>
+                </div>
+            </div>
         </div>
     </div>
 
-    <div class="page-banners grid-container">
+    <div class="page-banners grid-container row-prod-spec">
         <?php foreach($productsspeciallist as $product): ?>
 
             <?php if ($count2 > 2): ?>
@@ -174,7 +84,3 @@
     </div>-->
 
 </div>
-<br/>
-<br/>
-<br/>
-<br/>
