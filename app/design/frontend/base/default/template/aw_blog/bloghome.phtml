@@ -1,0 +1,16 @@
+<?php $posts = $this->getPosts(); ?>
+
+
+<?php foreach ($posts as $post): ?>
+
+        <div class="grid12-4 mobile-grid banner ultimo-div">
+            <?php echo $post->getPostContent(); ?>
+        </div>
+
+<?php endforeach; ?>
+
+
+<!--
+Buen tutorial de como modificar el blog
+http://www.entroducing.com/view/add-aheadworkss-blog-list-to-magento-home-page-or-any-cms-page
+-->
