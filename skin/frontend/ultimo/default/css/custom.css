@@ -12,7 +12,8 @@
   padding: 3px 2px;
   border: 1px solid #ddbd96;
   height: 250px;
-  margin-top: 10px;
+  margin-left: 10px;
+  width: 94%;
 }
 .prod-spec-container .clp-shorts-div h3 {
   font-size: 17px;
@@ -44,7 +45,12 @@
 }
 .prod-spec-container .row-prod-spec {
   height: 300px;
+  padding: 0;
+  margin-top: -20px;
+}
+.prod-spec-container .row-prod-spec div {
   margin-bottom: 0;
+  margin-right: -12px;
 }
 .prod-spec-container .prod-spec-first-div {
   position: relative;
@@ -54,17 +60,23 @@
 }
 .prod-spec-container .prod-spec-first-div .prod-spec-container-div {
   position: absolute;
-  margin-left: 200px;
+  margin-left: 170px;
+  padding-right: 30px;
   margin-top: 12px;
-}
-.prod-spec-container .prod-spec-first-div .prod-spec-container-div span,
-.prod-spec-container .prod-spec-first-div .prod-spec-container-div h3,
-.prod-spec-container .prod-spec-first-div .prod-spec-container-div h5,
-.prod-spec-container .prod-spec-first-div .prod-spec-container-div a {
   text-align: right;
 }
+.prod-spec-container .prod-spec-first-div .prod-spec-container-div .prod-spe-name {
+  font-size: 15px;
+}
+.prod-spec-container .prod-spec-first-div .prod-spec-container-div .prod-spe-finalPrice {
+  font-size: 25px;
+  margin-left: 10px;
+}
+.prod-spec-container .prod-spec-first-div .prod-spec-container-div .prod-spe-price {
+  font-size: 16px;
+}
 .prod-spec-container .prod-spec-first-div .prod-spec-container-div .prod-spe-plus {
-  font-size: 20px;
+  font-size: 15px;
 }
 .prod-spec-container .prod-spec-first-div img {
   height: 280px;
@@ -107,6 +119,9 @@
   font-size: 30px;
 }
 /* Footer */
+.footer-container3 {
+  /*Parallax primary container */
+}
 .footer-container3 .footer-bottom-container {
   background-color: #fffcf4 !important;
 }
@@ -144,6 +159,35 @@
 }
 .footer-container3 .contenedor-segundo-footer .grid12-12 {
   margin-top: 20px;
+}
+.footer-container3 .footer-primary-container {
+  position: relative;
+  text-align: center;
+  /* The image used */
+  background-image: url(../images/footer_top.png);
+  /* Set a specific height */
+  height: 400px;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.footer-container3 .footer-primary-container h2 {
+  position: absolute;
+  color: #f7e8dd;
+  width: 60%;
+  font-size: 21px;
+  font-weight: 100;
+  line-height: 35px;
+  left: 20%;
+  font-family: "Open Sans", sans-serif;
+}
+.footer-container3 .footer-primary-container h3 {
+  font-size: 15px;
+  line-height: 36px;
+  color: #fff;
+  padding-top: 8%;
 }
 /* Novedades hombre y mujer */
 .women-men-container .title-wom-men {

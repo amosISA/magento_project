@@ -14,7 +14,8 @@
     padding: 3px 2px;
     border: 1px solid #ddbd96;
     height: 250px;
-    margin-top: 10px;
+    margin-left: 10px;
+    width: 94%;
 
     h3 {
       font-size: 17px;
@@ -52,7 +53,13 @@
 
   .row-prod-spec {
     height: 300px;
-    margin-bottom: 0;
+    padding: 0;
+    margin-top: -20px;
+
+    div {
+      margin-bottom: 0;
+      margin-right: -12px;
+    }
   }
 
   .prod-spec-first-div {
@@ -63,15 +70,29 @@
 
     .prod-spec-container-div {
       position: absolute;
-      margin-left: 200px;
+      margin-left: 170px;
+      padding-right: 30px;
       margin-top: 12px;
+      text-align: right;
 
       span, h3, h5, a {
-        text-align: right;
+      }
+
+      .prod-spe-name {
+        font-size: 15px;
+      }
+
+      .prod-spe-finalPrice {
+        font-size: 25px;
+        margin-left:10px;
+      }
+
+      .prod-spe-price {
+        font-size: 16px;
       }
 
       .prod-spe-plus {
-        font-size: 20px;
+        font-size: 15px;
       }
     }
 
@@ -177,6 +198,42 @@
 
     .grid12-12 {
       margin-top: 20px;
+    }
+  }
+
+  /*Parallax primary container */
+  .footer-primary-container {
+    position: relative;
+    text-align: center;
+
+    /* The image used */
+    background-image: url(../images/footer_top.png);
+
+    /* Set a specific height */
+    height: 400px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h2 {
+      position: absolute;
+      color: #f7e8dd;
+      width: 60%;
+      font-size: 21px;
+      font-weight: 100;
+      line-height: 35px;
+      left: 20%;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    h3 {
+      font-size: 15px;
+      line-height: 36px;
+      color: #fff;
+      padding-top: 8%;
     }
   }
 }
