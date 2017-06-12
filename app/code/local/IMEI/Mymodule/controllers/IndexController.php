@@ -28,9 +28,11 @@ class IMEI_Mymodule_IndexController extends Mage_Core_Controller_Front_Action
             $imei->setCreated($date);
             $imei->setEstado('Pendiente');
             $imei->save();
-            print_r($imei->load(1));
+            $this->_redirect("mymodule/index/index");
+            Mage::getSingleton("core/session")->addSuccess("IMEI registrado correctamente!");
         }else {
-            echo "La longitud del texto introducido no es válida";
+            $this->_redirect("mymodule/index/index");
+            Mage::getSingleton("core/session")->addError("La longitud del texto introducido no es válida");
         }
     }
 

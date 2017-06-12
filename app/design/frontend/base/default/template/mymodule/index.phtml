@@ -1,10 +1,82 @@
 
+<style>
+    table, td, th {
+        border: 1px solid #ddd;
+        text-align: left;
+    }
+
+    th {
+        font-weight: bold;
+        background-color: #989FA9;
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    th, td {
+        padding: 15px;
+    }
+</style>
+
 <form method="post" action="<?php echo Mage::getUrl('mymodule/index/save')?>">
-  IMEI:<br>
-  <input type="text" name="reg_imei" value="">
-  <input type="submit" value="Submit">
+  <span style="font-weight: bold;">IMEI</span><br>
+  <input style="height: 27px; width: 200px;" type="text" name="reg_imei" value="">
+  <input style="background-color: black; color:white; border:1px solid black;width:130px; height:30px;" type="submit" value="REGISTRAR IMEI">
 </form>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 
+<br>
+<br>
+<br>
+<!--<h1>DISPOSITIVOS REGISTRADOS</h1>-->
+<?php
+    $collection = $this->getCollectionImei();
+?>
 
+<!--<table class="imei_table">
+    <thead>
+    <tr>
+        <th>IMEI</th>
+        <th>FECHA REGISTRO</th>
+        <th>ESTADO</th>
+    </tr>
+    </thead>
+    <tbody>
+        <?php
+            foreach ($collection as $item)
+            {
+                echo '<tr><td>'.$item->getImeiCode().'</td><td>'. $item->getCreated() .'</td><td>'. $item->getEstado() .'</td></tr>';
+            }
+        ?>
+    </tbody>
+</table>-->
+
+<?php $collection = $this->getCollection();  ?>
+<div class="page-title">
+    <h1><?php echo $this->__('DISPOSITIVOS REGISTRADOS') ?></h1>
+</div>
+<?php echo $this->getToolbarHtml(); ?>
+<table class="data-table" id="my-custom-table">
+    <thead>
+    <tr>
+        <th>IMEI</th>
+        <th>FECHA REGISTRO</th>
+        <th>ESTADO</th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php $_odd = ''; ?>
+    <?php foreach ($collection as $item): ?>
+        <tr>
+            <td><?php echo $item->getImeiCode(); ?></td>
+            <td><?php echo $this->formatDate($item->getCreated()); ?></td>
+            <td><?php echo $item->getEstado(); ?></td>
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table>
+<?php echo $this->getToolbarHtml(); ?>
 
 

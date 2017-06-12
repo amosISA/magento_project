@@ -315,3 +315,16 @@
   line-height: 16px;
   color: #68625a;
 }
+/* Table module */
+.imei_table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+.imei_table th,
+.imei_table td {
+  padding: 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
