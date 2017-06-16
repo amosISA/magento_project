@@ -4,10 +4,12 @@ class IMEI_Mymodule_Block_Adminhtml_Mymodule_Edit extends Mage_Adminhtml_Block_W
     //FORM CONTAINER -> recice the forms
     public function __construct()
     {
-        parent::__construct();
         $this->_objectId = 'id';
         $this->_blockGroup = 'mymodule';
         $this->_controller = 'adminhtml_mymodule';
+
+        parent::__construct();
+
         $this->_updateButton('save', 'label', 'Guardar IMEI');
         $this->_updateButton('delete', 'label', 'Borrar IMEI');
     }

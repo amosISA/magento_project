@@ -19,7 +19,7 @@ class IMEI_Mymodule_IndexController extends Mage_Core_Controller_Front_Action
     {
         $data = $this->getRequest()->getPost();
         $input = $data['reg_imei'];
-        $date = date('Y-m-d H:i:s');
+        $date = date('Y-m-d');
 
         if (strlen($input) == 15)
         {
