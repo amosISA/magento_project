@@ -27,6 +27,10 @@ class IMEI_Mymodule_IndexController extends Mage_Core_Controller_Front_Action
             $imei->setImeiCode($input);
             $imei->setCreated($date);
             $imei->setEstado('Pendiente');
+            if (Mage::getSingleton('customer/session')->isLoggedIn()) {
+                $cust = Mage::getSingleton('customer/session')->getCustomer()->getName();
+                $imei->setCustomer($cust);
+            }
             $imei->save();
             $this->_redirect("mymodule/index/index");
             Mage::getSingleton("core/session")->addSuccess("IMEI registrado correctamente!");

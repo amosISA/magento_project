@@ -20,12 +20,12 @@
     }
 </style>
 
-<form onsubmit="return validate();" method="post" action="<?php echo Mage::getUrl('mymodule/index/save')?>">
+<form method="post" action="<?php echo Mage::getUrl('adminhtml/mymodule/index')?>">
   <span style="font-weight: bold;">IMEI</span><br>
-  <input style="height: 27px; width: 200px;" type="text" name="reg_imei" value="" id="reg_im">
+  <input style="height: 27px; width: 200px;" type="text" name="reg_imei" value="">
   <input style="background-color: black; color:white; border:1px solid black;width:130px; height:30px;" type="submit" value="REGISTRAR IMEI">
 </form>
-<div style="margin-top:12px;"id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
+<div id="messages_product_view"><?php echo $this->getMessagesBlock()->getGroupedHtml() ?></div>
 
 <br>
 <br>
@@ -64,7 +64,6 @@
         <th>IMEI</th>
         <th>FECHA REGISTRO</th>
         <th>ESTADO</th>
-        <th>CUSTOMER</th>
     </tr>
     </thead>
     <tbody>
@@ -74,7 +73,6 @@
             <td><?php echo $item->getImeiCode(); ?></td>
             <td><?php echo $this->formatDate($item->getCreated()); ?></td>
             <td><?php echo $item->getEstado(); ?></td>
-            <td><?php echo $item->getCustomer(); ?></td>
         </tr>
     <?php endforeach; ?>
     </tbody>

@@ -2,7 +2,7 @@
 <config>
     <modules>
         <IMEI_Mymodule>
-            <version>0.1.0</version>
+            <version>0.2.0</version>
         </IMEI_Mymodule>
     </modules>
     <frontend>
@@ -23,6 +23,26 @@
             </updates>
         </layout>
     </frontend>
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <mymodule before="Mage_Adminhtml">IMEI_Mymodule_Adminhtml</mymodule>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+    <adminhtml>
+        <layout>
+            <updates>
+                <mymodule>
+                    <file>mymodule.xml</file>
+                </mymodule>
+            </updates>
+        </layout>
+    </adminhtml>
     <global>
         <helpers>
             <mymodule>

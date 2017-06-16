@@ -21,12 +21,13 @@
 			<action method="addJs"><script>infortis/jquery/plugins/jquery.owlcarousel.min.js</script></action>
 			<action method="addJs"><script>infortis/jquery/plugins/imagesloaded.js</script></action>
 			<action method="addItem"><type>skin_js</type><name>js/app.js</name></action>
+			<action method="addItem"><type>skin_js</type><name>js/custom.js</name></action>
 			
 		<!-- CSS: -->
 			
 			<!-- CSS base -->
 			<action method="addItem"><type>skin_css</type><name>css/styles-infortis.css</name><params/></action>
-			
+
 			<!-- Shared components -->
 			<action method="addItem"><type>skin_css</type><name>css/infortis/_shared/generic-cck.css</name><params/></action>
 			<action method="addItem"><type>skin_css</type><name>css/infortis/_shared/accordion.css</name><params/></action>

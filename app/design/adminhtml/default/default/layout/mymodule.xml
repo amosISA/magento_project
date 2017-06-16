@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <adminhtml_mymodule_index>
+        <reference name="content">
+            <block type="mymodule/adminhtml_grid" name="mymodule"/>
+        </reference>
+    </adminhtml_mymodule_index>
+    <adminhtml_mymodule_edit>
+        <reference name="content">
+            <block type="mymodule/adminhtml_mymodule_edit" name="mymodule_edit"/>
+        </reference>
+    </adminhtml_mymodule_edit>
+</layout>

@@ -1,0 +1,33 @@
+<config>
+    <menu>
+        <imei translate="title" module="mymodule">
+            <title>IMEI</title>
+            <sort_order>100</sort_order>
+            <children>
+                <mymodule translate="title" module="mymodule">
+                    <title>Registro</title>
+                    <sort_order>0</sort_order>
+                    <action>adminhtml/mymodule/index</action>
+                </mymodule>
+            </children>
+        </imei>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <imei translate="title">
+                        <title>IMEI</title>
+                        <sort_order>100</sort_order>
+                        <children>
+                            <mymodule translate="title">
+                                <title>Registro</title>
+                                <sort_order>0</sort_order>
+                            </mymodule>
+                        </children>
+                    </imei>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>
