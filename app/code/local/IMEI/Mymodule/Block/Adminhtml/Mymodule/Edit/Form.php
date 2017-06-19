@@ -37,6 +37,15 @@ class IMEI_Mymodule_Block_Adminhtml_Mymodule_Edit_Form extends Mage_Adminhtml_Bl
                 'name' => 'imei_code',
             ));
 
+        $fieldset->addField('created', 'date',
+            array(
+                'label' => 'Created',
+                'class' => 'required-entry',
+                'required' => true,
+                'name' => 'created',
+                'format' => Mage::app()->getLocale()->getDateFormat(Mage_Core_Model_Locale::FORMAT_TYPE_SHORT),
+            ));
+
         $fieldset->addField('estado', 'text',
             array(
                 'label' => 'Estado',
